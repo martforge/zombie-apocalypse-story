@@ -38,7 +38,7 @@ occupations_skill = {
 
 # character creation
 def creation(used_names=[]):
-    name = random.choice([n for n in name if n not in used_names])
+    name = random.choice([n for n in names if n not in used_names])
     occupation = random.choice(list(occupations_skill.keys()))
     skill = occupations_skill[occupation]
     survivor = Survivor(name, occupation, skill)
