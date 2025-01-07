@@ -37,17 +37,30 @@ occupations_skill = {
 }
 
 # character creation
-def creation():
-    name = random.choice(names)
+def creation(used_names=[]):
+    name = random.choice([n for n in name if n not in used_names])
     occupation = random.choice(list(occupations_skill.keys()))
     skill = occupations_skill[occupation]
     survivor = Survivor(name, occupation, skill)
     return survivor
 
 def main():
-    survivor = creation()
-    print(survivor)
+    num_survivor = 0
+    used_names = []
+    while num_survivor < 5:
+        survivor = creation(used_names)
+        print(survivor)
+        num_survivor += 1
+    #survivors = ''
+
+    #character1 = 
+    #character2 = 
+    #character3 = 
+    #print(survivor)
 
 
 if __name__ == '__main__':
     main()
+
+
+
