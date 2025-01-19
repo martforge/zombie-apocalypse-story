@@ -10,6 +10,7 @@ class Survivor:
     def __str__(self):
         return f'{self.name} - {self.occupation} with skill: {self.skill}'
 
+
 names = [
     "Jin",    # Chinese/Korean (Asia)
     "Aya",    # Japanese (Asia)
